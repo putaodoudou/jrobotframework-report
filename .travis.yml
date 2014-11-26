@@ -1,0 +1,16 @@
+language: java
+jdk:
+  - oraclejdk7
+  - openjdk7
+  - openjdk6
+before_install:
+  - export TZ=Asia/Shanghai
+  - date
+script: mvn clean test
+env: MAVEN_OPTS="-XX:MaxPermSize=128m"
+notifications:
+  email:
+    recipients:
+      - sartisty@163.com
+    on_success: change
+    on_failure: always
