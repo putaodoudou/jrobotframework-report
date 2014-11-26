@@ -1,0 +1,14 @@
+<statistics>
+  <total>
+    <stat pass="0" fail="1">Critical Tests</stat>
+    <stat pass="0" fail="1">All Tests</stat>
+  </total>
+  <tag>
+    <stat pass="0" fail="1" doc="" links="" combined="" info="">builtin</stat>
+  </tag>
+  <suite>
+    <stat pass="0" fail="1" name="jspringbot-basic-samples" id="s1">jspringbot-basic-samples</stat>
+    <stat pass="0" fail="1" name="Builtin" id="s1-s1">jspringbot-basic-samples.Builtin</stat>
+    <stat pass="0" fail="1" name="Sleep" id="s1-s1-s1">jspringbot-basic-samples.Builtin.Sleep</stat>
+  </suite>
+</statistics>

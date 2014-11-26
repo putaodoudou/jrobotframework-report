@@ -1,0 +1,4 @@
+<suite>
+  <stat pass="2" fail="0" name="变量替换传递" id="s1-s1-s2">jspringbot-basic-samples.Builtin.变量替换传递</stat>
+  <stat pass="4" fail="0" name="标准条件" id="s1-s3-s1">jspringbot-basic-samples.Condition.标准条件</stat>
+</suite>

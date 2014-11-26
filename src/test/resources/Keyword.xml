@@ -1,0 +1,8 @@
+<kw type="kw" name="BuiltIn.Sleep">
+  <doc>Pauses the test executed for the given time.</doc>
+  <arguments>
+    <arg>2 s</arg>
+  </arguments>
+  <msg timestamp="20141119 08:58:33.028" level="INFO">Slept 2 seconds</msg>
+  <status endtime="20141119 08:58:33.129" starttime="20141119 08:58:33.059" status="PASS"></status>
+</kw>

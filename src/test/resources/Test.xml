@@ -1,0 +1,15 @@
+<test name="长时间Sleep" id="s1-s1-s1-t1">
+  <kw type="kw" name="BuiltIn.Sleep">
+    <doc>Pauses the test executed for the given time.</doc>
+    <arguments>
+      <arg>2 s</arg>
+    </arguments>
+    <msg timestamp="20141119 18:24:23.380" level="INFO">Slept 2 seconds</msg>
+    <status endtime="20141119 18:24:23.380" starttime="20141119 18:24:21.369" status="PASS"></status>
+  </kw>
+  <doc></doc>
+  <tags>
+    <tag>builtin</tag>
+  </tags>
+  <status endtime="20141119 18:24:23.406" starttime="20141119 18:24:21.363" status="FAIL" critical="yes">No keyword with name &apos;abc&apos; found.</status>
+</test>

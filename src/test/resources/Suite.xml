@@ -1,0 +1,40 @@
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance" name="jspringbot-basic-samples" id="s1">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin" name="Builtin" id="s1-s1">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/sleep.txt" name="Sleep" id="s1-s1-s1">
+<test name="长时间Sleep" id="s1-s1-s1-t1">
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 s</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:23.378">Slept 2 seconds</msg>
+<status endtime="20141119 18:24:23.380" starttime="20141119 18:24:21.369" status="PASS"></status>
+</kw>
+<kw type="kw" name="abc">
+<doc></doc>
+<arguments>
+</arguments>
+<msg level="FAIL" timestamp="20141119 18:24:23.402">No keyword with name 'abc' found.</msg>
+<status endtime="20141119 18:24:23.404" starttime="20141119 18:24:23.400" status="FAIL"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>builtin</tag>
+</tags>
+<status critical="yes" endtime="20141119 18:24:23.406" starttime="20141119 18:24:21.363" status="FAIL">No keyword with name 'abc' found.</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:23.411" starttime="20141119 18:24:20.431" status="FAIL"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:23.421" starttime="20141119 18:24:20.393" status="FAIL"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:23.431" starttime="20141119 18:24:20.223" status="FAIL"></status>
+</suite>

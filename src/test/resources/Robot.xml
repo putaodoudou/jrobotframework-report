@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.6 (Jython 2.5.3 on java1.8.0_05)" generated="20141119 18:23:53.810">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance" name="jspringbot-basic-samples" id="s1">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin" name="Builtin" id="s1-s1">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/sleep.txt" name="Sleep" id="s1-s1-s1">
+<test name="长时间Sleep" id="s1-s1-s1-t1">
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 s</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.276">Slept 2 seconds</msg>
+<status endtime="20141119 18:24:02.277" starttime="20141119 18:24:00.260" status="PASS"></status>
+</kw>
+<kw type="kw" name="abc">
+<doc></doc>
+<arguments>
+</arguments>
+<msg level="FAIL" timestamp="20141119 18:24:02.308">No keyword with name 'abc' found.</msg>
+<status endtime="20141119 18:24:02.309" starttime="20141119 18:24:02.306" status="FAIL"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>builtin</tag>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.311" starttime="20141119 18:24:00.240" status="FAIL">No keyword with name 'abc' found.</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:02.320" starttime="20141119 18:23:54.387" status="FAIL"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/变量替换传递.txt" name="变量替换传递" id="s1-s1-s2">
+<test name="变量替换传递" id="s1-s1-s2-t1">
+<kw type="kw" name="${PATH} = BuiltIn.Replace Variables">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/data/${FILENAME}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.430">${PATH} = /Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/data/ch01.pdf</msg>
+<status endtime="20141119 18:24:02.428" starttime="20141119 18:24:02.423" status="PASS"></status>
+</kw>
+<kw type="kw" name="${download_link} = BuiltIn.Replace Variables">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>xpath=//tr[.//a[@title="${FILENAME}"]]//a[@class="lf_download"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.437">${download_link} = xpath=//tr[.//a[@title="ch01.pdf"]]//a[@class="lf_download"]</msg>
+<status endtime="20141119 18:24:02.436" starttime="20141119 18:24:02.433" status="PASS"></status>
+</kw>
+<kw type="kw" name="${select_link} = BuiltIn.Replace Variables">
+<doc>Replaces variables in the given text with their current values.</doc>
+<arguments>
+<arg>xpath=//tr[.//a[@title="${FILENAME}"]]//input</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.446">${select_link} = xpath=//tr[.//a[@title="ch01.pdf"]]//input</msg>
+<status endtime="20141119 18:24:02.445" starttime="20141119 18:24:02.440" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${download_link}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.453">xpath=//tr[.//a[@title="ch01.pdf"]]//a[@class="lf_download"]</msg>
+<status endtime="20141119 18:24:02.460" starttime="20141119 18:24:02.449" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${select_link}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.467">xpath=//tr[.//a[@title="ch01.pdf"]]//input</msg>
+<status endtime="20141119 18:24:02.468" starttime="20141119 18:24:02.463" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${PATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.475">${PATH} = /Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/data/ch01.pdf</msg>
+<status endtime="20141119 18:24:02.477" starttime="20141119 18:24:02.471" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ORDER_ID}</arg>
+<arg>6056</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.487">${ORDER_ID} = 6056</msg>
+<status endtime="20141119 18:24:02.489" starttime="20141119 18:24:02.479" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${FILENAME}</arg>
+<arg>ch02.pdf</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.497">${FILENAME} = ch02.pdf</msg>
+<status endtime="20141119 18:24:02.498" starttime="20141119 18:24:02.492" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.501" starttime="20141119 18:24:02.415" status="PASS"></status>
+</test>
+<test name="打印上个case传递过来的变量值" id="s1-s1-s2-t2">
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${FILENAME}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.518">ch02.pdf</msg>
+<status endtime="20141119 18:24:02.519" starttime="20141119 18:24:02.514" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${PATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.525">/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/builtin/data/ch01.pdf</msg>
+<status endtime="20141119 18:24:02.527" starttime="20141119 18:24:02.521" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ORDER_ID}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.532">6056</msg>
+<status endtime="20141119 18:24:02.533" starttime="20141119 18:24:02.529" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${EMPTY}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.539"></msg>
+<status endtime="20141119 18:24:02.541" starttime="20141119 18:24:02.536" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${empty}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.547"></msg>
+<status endtime="20141119 18:24:02.548" starttime="20141119 18:24:02.544" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.551" starttime="20141119 18:24:02.503" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:02.554" starttime="20141119 18:24:02.334" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:02.566" starttime="20141119 18:23:54.340" status="FAIL"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/collections" name="Collections" id="s1-s2">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/collections/list.txt" name="List" id="s1-s2-s1">
+<test name="获取第n号元素" id="s1-s2-s1-t1">
+<kw type="kw" name="Collections.Log List">
+<doc>Logs the length and contents of the `list` using given `level`.</doc>
+<arguments>
+<arg>${list}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.697">List length is 4 and it contains following items:
+0: 1
+1: 2
+2: 3
+3: 4</msg>
+<status endtime="20141119 18:24:02.706" starttime="20141119 18:24:02.692" status="PASS"></status>
+</kw>
+<kw type="kw" name="${x} = Collections.Get From List">
+<doc>Returns the value specified with an `index` from `list`.</doc>
+<arguments>
+<arg>${list}</arg>
+<arg>0</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.715">${x} = 1</msg>
+<status endtime="20141119 18:24:02.714" starttime="20141119 18:24:02.709" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.718" starttime="20141119 18:24:02.684" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:02.722" starttime="20141119 18:24:02.611" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:02.727" starttime="20141119 18:24:02.578" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/condition" name="Condition" id="s1-s3">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/condition/标准条件.txt" name="标准条件" id="s1-s3-s1">
+<test name="Run-Keyword" id="s1-s3-s1-t1">
+<kw type="kw" name="${MY_KEYWORD} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Log</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.866">${MY_KEYWORD} = Log</msg>
+<status endtime="20141119 18:24:02.865" starttime="20141119 18:24:02.862" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>${MY_KEYWORD}</arg>
+<arg>Test</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.907">Test</msg>
+<status endtime="20141119 18:24:02.908" starttime="20141119 18:24:02.903" status="PASS"></status>
+</kw>
+<status endtime="20141119 18:24:02.910" starttime="20141119 18:24:02.869" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.912" starttime="20141119 18:24:02.857" status="PASS"></status>
+</test>
+<test name="Run-Keyword-If" id="s1-s3-s1-t2">
+<kw type="kw" name="${TYPE} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>V1</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.925">${TYPE} = V1</msg>
+<status endtime="20141119 18:24:02.924" starttime="20141119 18:24:02.920" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V1'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 1</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Testing Variant 1</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.938">Testing Variant 1</msg>
+<status endtime="20141119 18:24:02.939" starttime="20141119 18:24:02.935" status="PASS"></status>
+</kw>
+<status endtime="20141119 18:24:02.941" starttime="20141119 18:24:02.928" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V2'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 2</arg>
+</arguments>
+<status endtime="20141119 18:24:02.949" starttime="20141119 18:24:02.944" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${TYPE}' == 'V3'</arg>
+<arg>Log</arg>
+<arg>Testing Variant 3</arg>
+</arguments>
+<status endtime="20141119 18:24:02.958" starttime="20141119 18:24:02.952" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:02.961" starttime="20141119 18:24:02.915" status="PASS"></status>
+</test>
+<test name="Run-Keyword-Ignore-Error" id="s1-s3-s1-t3">
+<kw type="kw" name="@{CAPTAINS} = BuiltIn.Create List">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Picard</arg>
+<arg>Kirk</arg>
+<arg>Archer</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.977">@{CAPTAINS} = [ Picard | Kirk | Archer ]</msg>
+<status endtime="20141119 18:24:02.976" starttime="20141119 18:24:02.972" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Ignore Error">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>Should Be Empty</arg>
+<arg>${CAPTAINS}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Empty">
+<doc>Verifies that the given item is empty.</doc>
+<arguments>
+<arg>${CAPTAINS}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.989">Length is 3</msg>
+<msg level="FAIL" timestamp="20141119 18:24:02.992">'[u'Picard', u'Kirk', u'Archer']' should be empty.</msg>
+<status endtime="20141119 18:24:02.993" starttime="20141119 18:24:02.983" status="FAIL"></status>
+</kw>
+<status endtime="20141119 18:24:02.994" starttime="20141119 18:24:02.980" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Reached this point despite of error</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:02.997">Reached this point despite of error</msg>
+<status endtime="20141119 18:24:02.998" starttime="20141119 18:24:02.995" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${NEWLINE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.002">
+</msg>
+<status endtime="20141119 18:24:03.002" starttime="20141119 18:24:02.999" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>a${NEWLINE}b</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.009">a
+b</msg>
+<status endtime="20141119 18:24:03.010" starttime="20141119 18:24:03.005" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:03.013" starttime="20141119 18:24:02.963" status="PASS"></status>
+</test>
+<test name="Set-Variable-If" id="s1-s3-s1-t4">
+<kw type="kw" name="${rc} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>abc</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.027">${rc} = abc</msg>
+<status endtime="20141119 18:24:03.026" starttime="20141119 18:24:03.022" status="PASS"></status>
+</kw>
+<kw type="kw" name="${var} = BuiltIn.Set Variable If">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${None}' == '${rc}'</arg>
+<arg>hello</arg>
+<arg>world</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.038">${var} = world</msg>
+<status endtime="20141119 18:24:03.037" starttime="20141119 18:24:03.030" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${var}</arg>
+<arg>world</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.043">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:03.044" starttime="20141119 18:24:03.041" status="PASS"></status>
+</kw>
+<kw type="kw" name="${rc} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${None}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.051">${rc} = None</msg>
+<status endtime="20141119 18:24:03.050" starttime="20141119 18:24:03.046" status="PASS"></status>
+</kw>
+<kw type="kw" name="${var} = BuiltIn.Set Variable If">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>'${None}' == '${rc}'</arg>
+<arg>hello</arg>
+<arg>world</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.072">${var} = hello</msg>
+<status endtime="20141119 18:24:03.070" starttime="20141119 18:24:03.064" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${var}</arg>
+<arg>hello</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.086">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:03.087" starttime="20141119 18:24:03.082" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:03.089" starttime="20141119 18:24:03.016" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:03.097" starttime="20141119 18:24:02.771" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:03.377" starttime="20141119 18:24:02.733" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/environment" name="Environment" id="s1-s4">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/environment/global-env.txt" name="Global-Env" id="s1-s4-s1">
+<test name="打印环境变量" id="s1-s4-s1-t1">
+<kw type="kw" name="OperatingSystem.Log Environment Variables">
+<doc>Logs all environment variables using the given log level.</doc>
+<arguments>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:03.528">__CF_USER_TEXT_ENCODING = 0x1F5:0x19:0x34</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.529">Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.UE7mT36vTj/Render</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.530">HOME = /Users/yanshuai</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.530">JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.531">JAVA_MAIN_CLASS_3261 = org.codehaus.plexus.classworlds.launcher.Launcher</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.532">LANG = zh_CN.UTF-8</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.532">LOGNAME = yanshuai</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.533">MAVEN_CMD_LINE_ARGS = clean integration-test</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.533">OLDPWD = /Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.534">PATH = /usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.536">PWD = /Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.537">SECURITYSESSIONID = 186a5</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.538">SHELL = /bin/bash</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.539">SHLVL = 1</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.540">SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.6WMAR1psHp/Listeners</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.541">TERM = xterm-256color</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.542">TERM_PROGRAM = Apple_Terminal</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.543">TERM_PROGRAM_VERSION = 343</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.544">TERM_SESSION_ID = D0620B29-6F41-4AAA-8D87-20E2CA9B859F</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.544">TMPDIR = /var/folders/bs/73221ng56755kdycq_y7w9x80000gn/T/</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.545">USER = yanshuai</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.546">XPC_FLAGS = 0x0</msg>
+<msg level="INFO" timestamp="20141119 18:24:03.548">XPC_SERVICE_NAME = 0</msg>
+<status endtime="20141119 18:24:03.548" starttime="20141119 18:24:03.524" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:03.551" starttime="20141119 18:24:03.517" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:03.556" starttime="20141119 18:24:03.428" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:03.562" starttime="20141119 18:24:03.392" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/expression" name="Expression" id="s1-s5">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/expression/equal.txt" name="Equal" id="s1-s5-s1">
+<test name="equal operation" id="s1-s5-s1-t1">
+<kw type="kw" name="${intValue} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[100]</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:03.765">&lt;b&gt;${intValue} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[100]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+EL Evaluation Result = 100</msg>
+<msg level="INFO" timestamp="20141119 18:24:08.684">${intValue} = 100</msg>
+<status endtime="20141119 18:24:08.662" starttime="20141119 18:24:03.687" status="PASS"></status>
+</kw>
+<kw type="kw" name="${isEqual} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[$1 == 100]</arg>
+<arg>${intValue}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:08.776">&lt;b&gt;${isEqual} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[$1 == 100]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+Expression Variable [$1] = 100.000000
+EL Evaluation Result = true</msg>
+<msg level="INFO" timestamp="20141119 18:24:08.778">${isEqual} = True</msg>
+<status endtime="20141119 18:24:08.777" starttime="20141119 18:24:08.687" status="PASS"></status>
+</kw>
+<kw type="kw" name="${isNotEqual} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[$1 == 90]</arg>
+<arg>${intValue}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:08.786">&lt;b&gt;${isNotEqual} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[$1 == 90]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+Expression Variable [$1] = 100.000000
+EL Evaluation Result = false</msg>
+<msg level="INFO" timestamp="20141119 18:24:08.788">${isNotEqual} = False</msg>
+<status endtime="20141119 18:24:08.788" starttime="20141119 18:24:08.780" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:08.790" starttime="20141119 18:24:03.682" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:08.798" starttime="20141119 18:24:03.603" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/expression/not.txt" name="Not" id="s1-s5-s2">
+<test name="not operation" id="s1-s5-s2-t1">
+<kw type="kw" name="${isVisible} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[true]</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.160">&lt;b&gt;${isVisible} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[true]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+EL Evaluation Result = true</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.162">${isVisible} = True</msg>
+<status endtime="20141119 18:24:09.161" starttime="20141119 18:24:09.152" status="PASS"></status>
+</kw>
+<kw type="kw" name="${isNotVisible} = not">
+<doc></doc>
+<arguments>
+<arg>${isVisible}</arg>
+</arguments>
+<kw type="kw" name="${value} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[!$1]</arg>
+<arg>${bValue}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.182">&lt;b&gt;${value} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[!$1]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+Expression Variable [$1] = true
+EL Evaluation Result = false</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.184">${value} = False</msg>
+<status endtime="20141119 18:24:09.183" starttime="20141119 18:24:09.169" status="PASS"></status>
+</kw>
+<msg level="INFO" timestamp="20141119 18:24:09.189">${isNotVisible} = False</msg>
+<status endtime="20141119 18:24:09.188" starttime="20141119 18:24:09.164" status="PASS"></status>
+</kw>
+<kw type="kw" name="${isVisible} = not">
+<doc></doc>
+<arguments>
+<arg>${isNotVisible}</arg>
+</arguments>
+<kw type="kw" name="${value} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$[!$1]</arg>
+<arg>${bValue}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.204">&lt;b&gt;${value} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$[!$1]&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+Expression Variable [$1] = false
+EL Evaluation Result = true</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.207">${value} = True</msg>
+<status endtime="20141119 18:24:09.206" starttime="20141119 18:24:09.196" status="PASS"></status>
+</kw>
+<msg level="INFO" timestamp="20141119 18:24:09.212">${isVisible} = True</msg>
+<status endtime="20141119 18:24:09.211" starttime="20141119 18:24:09.191" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.215" starttime="20141119 18:24:09.146" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.220" starttime="20141119 18:24:08.809" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.227" starttime="20141119 18:24:03.567" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/extended" name="Extended" id="s1-s6">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/extended/custom.txt" name="Custom" id="s1-s6-s1">
+<test name="Print Arguments Test" id="s1-s6-s1-t1">
+<kw type="kw" name="JSpringBotGlobal.Print Arguments">
+<doc>Print arguments' count, then each argument.</doc>
+<arguments>
+<arg>1024</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.368">[1] 1024</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.368">&lt;b&gt;JSpringBotGlobal.Print Arguments:&lt;/b&gt;</msg>
+<status endtime="20141119 18:24:09.370" starttime="20141119 18:24:09.364" status="PASS"></status>
+</kw>
+<kw type="kw" name="JSpringBotGlobal.Print Arguments">
+<doc>Print arguments' count, then each argument.</doc>
+<arguments>
+<arg>hello, world</arg>
+<arg>中文</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.376">[2] hello, world 中文</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.376">&lt;b&gt;JSpringBotGlobal.Print Arguments:&lt;/b&gt;</msg>
+<status endtime="20141119 18:24:09.377" starttime="20141119 18:24:09.372" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.379" starttime="20141119 18:24:09.361" status="PASS"></status>
+</test>
+<test name="Say Hello Test" id="s1-s6-s1-t2">
+<kw type="kw" name="JSpringBotGlobal.Say Hello">
+<doc>Print hello, world in stdout.</doc>
+<arguments>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.389">hello, world!</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.389">&lt;b&gt;JSpringBotGlobal.Say Hello:&lt;/b&gt;</msg>
+<status endtime="20141119 18:24:09.390" starttime="20141119 18:24:09.385" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.397" starttime="20141119 18:24:09.381" status="PASS"></status>
+</test>
+<test name="Mobile AES Encrypt" id="s1-s6-s1-t3">
+<kw type="kw" name="${actual} = JSpringBotGlobal.AES Encrypt">
+<doc>AES encrypt text using secret.</doc>
+<arguments>
+<arg>{"verifyCode":"","loginNo":"49","password":"111111"}</arg>
+<arg>1234567890123456</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.538">&lt;b&gt;${actual} = JSpringBotGlobal.AES Encrypt:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.540">${actual} = KywMHLPY2nS17UqyUBAKaJvzdDQFhaKmfFjxEAlo4LgDx8PYMhoFwUPrLGGywnfI/Qmbr9L/+6U6c+RZk1g+Cg==</msg>
+<status endtime="20141119 18:24:09.539" starttime="20141119 18:24:09.404" status="PASS"></status>
+</kw>
+<kw type="kw" name="${expect} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$['KywMHLPY2nS17UqyUBAKaJvzdDQFhaKmfFjxEAlo4LgDx8PYMhoFwUPrLGGywnfI/Qmbr9L/+6U6c+RZk1g+Cg==']</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.565">&lt;b&gt;${expect} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$['KywMHLPY2nS17UqyUBAKaJvzdDQFhaKmfFjxEAlo4LgDx8PYMhoFwUPrLGGywnfI/Qmbr9L/+6U6c+RZk1g+Cg==']&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+EL Evaluation Result = &amp;quot;KywMHLPY2nS17UqyUBAKaJvzdDQFhaKmfFjxEAlo4LgDx8PYMhoFwUPrLGGywnfI/Qmbr9L/+6U6c+RZk1g+Cg==&amp;quot;</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.567">${expect} = KywMHLPY2nS17UqyUBAKaJvzdDQFhaKmfFjxEAlo4LgDx8PYMhoFwUPrLGGywnfI/Qmbr9L/+6U6c+RZk1g+Cg==</msg>
+<status endtime="20141119 18:24:09.566" starttime="20141119 18:24:09.542" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expect}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.573">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.574" starttime="20141119 18:24:09.570" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.576" starttime="20141119 18:24:09.400" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.578" starttime="20141119 18:24:09.268" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.583" starttime="20141119 18:24:09.236" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/os" name="Os" id="s1-s7">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/os/file.txt" name="File" id="s1-s7-s1">
+<test name="Join Path" id="s1-s7-s1-t1">
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${PATH}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.721">my/path</msg>
+<status endtime="20141119 18:24:09.722" starttime="20141119 18:24:09.718" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.723" starttime="20141119 18:24:09.712" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.726" starttime="20141119 18:24:09.617" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.731" starttime="20141119 18:24:09.588" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/variables" name="Variables" id="s1-s8">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/variables/datatype.txt" name="Datatype" id="s1-s8-s1">
+<test name="变量a/b" id="s1-s8-s1-t1">
+<kw type="kw" name="${v} = JSpringBotGlobal.EL Evaluate">
+<doc>Evaluates the given EL {{expression}} with {{*variables}}.</doc>
+<arguments>
+<arg>$['a/b']</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:09.851">&lt;b&gt;${v} = JSpringBotGlobal.EL Evaluate:&lt;/b&gt;
+Base Expression = &amp;quot;$['a/b']&amp;quot;
+Expression Handler = &amp;quot;Expression Language (JUEL)&amp;quot;
+EL Evaluation Result = &amp;quot;a/b&amp;quot;</msg>
+<msg level="INFO" timestamp="20141119 18:24:09.853">${v} = a/b</msg>
+<status endtime="20141119 18:24:09.852" starttime="20141119 18:24:09.846" status="PASS"></status>
+</kw>
+<kw type="kw" name="${hi} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Hello, world!</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.857">${hi} = Hello, world!</msg>
+<status endtime="20141119 18:24:09.856" starttime="20141119 18:24:09.854" status="PASS"></status>
+</kw>
+<kw type="kw" name="${hi2} = BuiltIn.Set Variable">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>I said: ${hi}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.863">${hi2} = I said: Hello, world!</msg>
+<status endtime="20141119 18:24:09.862" starttime="20141119 18:24:09.859" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.865" starttime="20141119 18:24:09.842" status="PASS"></status>
+</test>
+<test name="Null&amp;&amp;None" id="s1-s8-s1-t2">
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${None}</arg>
+<arg>${Null}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.873">Argument types are:
+&lt;type 'NoneType'&gt;
+&lt;type 'NoneType'&gt;</msg>
+<status endtime="20141119 18:24:09.874" starttime="20141119 18:24:09.871" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.876" starttime="20141119 18:24:09.867" status="PASS"></status>
+</test>
+<test name="White Space" id="s1-s8-s1-t3">
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${SPACE}</arg>
+<arg>\ \</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.890">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.891" starttime="20141119 18:24:09.884" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${SPACE * 4}</arg>
+<arg>\ \ \ \ \</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.901">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.902" starttime="20141119 18:24:09.893" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>"${SPACE}"</arg>
+<arg>" "</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.909">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.910" starttime="20141119 18:24:09.904" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>"${SPACE * 2}"</arg>
+<arg>" \ "</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.918">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.919" starttime="20141119 18:24:09.912" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>"${SPACE * 3}"</arg>
+<arg>" \ \ "</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.926">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status endtime="20141119 18:24:09.927" starttime="20141119 18:24:09.920" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>a${TAB}b</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.931">a	b</msg>
+<status endtime="20141119 18:24:09.932" starttime="20141119 18:24:09.928" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${TAB}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.938">	</msg>
+<status endtime="20141119 18:24:09.938" starttime="20141119 18:24:09.934" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>a${NEWLINE}b</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.945">a
+b</msg>
+<status endtime="20141119 18:24:09.946" starttime="20141119 18:24:09.941" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.948" starttime="20141119 18:24:09.879" status="PASS"></status>
+</test>
+<test name="Empty" id="s1-s8-s1-t4">
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${EMPTY}</arg>
+<arg></arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:09.957">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'str'&gt;</msg>
+<status endtime="20141119 18:24:09.958" starttime="20141119 18:24:09.955" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:09.960" starttime="20141119 18:24:09.951" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.963" starttime="20141119 18:24:09.769" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:09.969" starttime="20141119 18:24:09.736" status="PASS"></status>
+</suite>
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/xml" name="Xml" id="s1-s9">
+<suite source="/Users/yanshuai/Elong/framework/ui/samples/jspringbot-basic-samples/src/test/robotframework/acceptance/xml/xml.txt" name="Xml" id="s1-s9-s1">
+<test name="xml xpath sample test" id="s1-s9-s1-t1">
+<kw type="kw" name="${text} = JSpringBotGlobal.Join Strings To Single String">
+<doc>classpath:desc/JoinStringsToSingleString.txt</doc>
+<arguments>
+<arg>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</arg>
+<arg>&lt;student&gt;</arg>
+<arg>&lt;user&gt;</arg>
+<arg>&lt;id&gt;1&lt;/id&gt;</arg>
+<arg>&lt;name&gt;test_boy&lt;/name&gt;</arg>
+<arg>&lt;age&gt;23&lt;/age&gt;</arg>
+<arg>&lt;sex&gt;boy&lt;/sex&gt;</arg>
+<arg>&lt;/user&gt;</arg>
+<arg>&lt;user&gt;</arg>
+<arg>&lt;id&gt;2&lt;/id&gt;</arg>
+<arg>&lt;name&gt;test_girl&lt;/name&gt;</arg>
+<arg>&lt;age&gt;20&lt;/age&gt;</arg>
+<arg>&lt;sex&gt;girl&lt;/sex&gt;</arg>
+<arg>&lt;/user&gt;</arg>
+<arg>&lt;/student&gt;</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.092">&lt;b&gt;${text} = JSpringBotGlobal.Join Strings To Single String:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:10.100">${text} = &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;student&gt;&lt;user&gt;&lt;id&gt;1&lt;/id&gt;&lt;name&gt;test_boy&lt;/name&gt;&lt;age&gt;23&lt;/age&gt;&lt;sex&gt;boy&lt;/sex&gt;&lt;/user&gt;&lt;user&gt;&lt;id&gt;2&lt;/id&gt;&lt;name&gt;test_girl&lt;/name&gt;&lt;age&gt;20&lt;/age&gt;&lt;sex&gt;girl&lt;/sex&gt;&lt;/user&gt;&lt;/student...</msg>
+<status endtime="20141119 18:24:10.093" starttime="20141119 18:24:10.083" status="PASS"></status>
+</kw>
+<kw type="kw" name="JSpringBotGlobal.Set XML String">
+<doc>Sets XML String.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.148">&lt;b&gt;XML String:&lt;/b&gt;
+&amp;lt;student&amp;gt;
+  &amp;lt;user&amp;gt;
+    &amp;lt;id&amp;gt;1&amp;lt;/id&amp;gt;
+    &amp;lt;name&amp;gt;test_boy&amp;lt;/name&amp;gt;
+    &amp;lt;age&amp;gt;23&amp;lt;/age&amp;gt;
+    &amp;lt;sex&amp;gt;boy&amp;lt;/sex&amp;gt;
+  &amp;lt;/user&amp;gt;
+  &amp;lt;user&amp;gt;
+    &amp;lt;id&amp;gt;2&amp;lt;/id&amp;gt;
+    &amp;lt;name&amp;gt;test_girl&amp;lt;/name&amp;gt;
+    &amp;lt;age&amp;gt;20&amp;lt;/age&amp;gt;
+    &amp;lt;sex&amp;gt;girl&amp;lt;/sex&amp;gt;
+  &amp;lt;/user&amp;gt;
+&amp;lt;/student&amp;gt;</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.148">&lt;b&gt;JSpringBotGlobal.Set XML String:&lt;/b&gt;</msg>
+<status endtime="20141119 18:24:10.150" starttime="20141119 18:24:10.103" status="PASS"></status>
+</kw>
+<kw type="kw" name="${count} = JSpringBotGlobal.Get XML XPath Match Count">
+<doc>Returns the XML matched counts given the xpath.</doc>
+<arguments>
+<arg>//*[text()='1']</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.239">&lt;b&gt;Get Node List:&lt;/b&gt;
+Xpath Expression = &amp;quot;//*[text()='1']&amp;quot;
+Number of Elements Found = 1</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.239">&lt;b&gt;Get Xpath Match Count:&lt;/b&gt;
+Xpath Expression = &amp;quot;//*[text()='1']&amp;quot;
+Actual Found = 1</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.239">&lt;b&gt;${count} = JSpringBotGlobal.Get XML XPath Match Count:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:10.242">${count} = 1</msg>
+<status endtime="20141119 18:24:10.241" starttime="20141119 18:24:10.153" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${count}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:10.244">1</msg>
+<status endtime="20141119 18:24:10.245" starttime="20141119 18:24:10.243" status="PASS"></status>
+</kw>
+<kw type="kw" name="${text} = JSpringBotGlobal.Get XML XPath Single Text Content">
+<doc>Returns the XML a single text content given the xpath expression</doc>
+<arguments>
+<arg>/student/user/sex[text()='boy']</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.254">&lt;b&gt;Get Xpath Single Text Content:&lt;/b&gt;
+Xpath Expression = &amp;quot;/student/user/sex[text()='boy']&amp;quot;
+Text Content = &amp;quot;boy&amp;quot;</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.254">&lt;b&gt;${text} = JSpringBotGlobal.Get XML XPath Single Text Content:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:10.256">${text} = boy</msg>
+<status endtime="20141119 18:24:10.255" starttime="20141119 18:24:10.247" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:10.259">boy</msg>
+<status endtime="20141119 18:24:10.259" starttime="20141119 18:24:10.257" status="PASS"></status>
+</kw>
+<kw type="kw" name="${xpath} = JSpringBotGlobal.Get Single XML XPath By Text">
+<doc>classpath:desc/GetSingleXPathByText.txt</doc>
+<arguments>
+<arg>boy</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.393">&lt;b&gt;Get Node List:&lt;/b&gt;
+Xpath Expression = &amp;quot;//*[text()='boy']&amp;quot;
+Number of Elements Found = 1</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.393">&lt;b&gt;Element [0]:&lt;/b&gt;
+&amp;lt;sex&amp;gt;boy&amp;lt;/sex&amp;gt;</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.393">&lt;b&gt;${xpath} = JSpringBotGlobal.Get Single XML XPath By Text:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:10.396">${xpath} = /student/user/sex[text()='boy']</msg>
+<status endtime="20141119 18:24:10.394" starttime="20141119 18:24:10.261" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${xpath}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:10.401">/student/user/sex[text()='boy']</msg>
+<status endtime="20141119 18:24:10.403" starttime="20141119 18:24:10.398" status="PASS"></status>
+</kw>
+<kw type="kw" name="${text} = JSpringBotGlobal.Get XML XPath Single Text Content">
+<doc>Returns the XML a single text content given the xpath expression</doc>
+<arguments>
+<arg>${xpath}</arg>
+</arguments>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.409">&lt;b&gt;Get Xpath Single Text Content:&lt;/b&gt;
+Xpath Expression = &amp;quot;/student/user/sex[text()='boy']&amp;quot;
+Text Content = &amp;quot;boy&amp;quot;</msg>
+<msg level="INFO" html="yes" timestamp="20141119 18:24:10.409">&lt;b&gt;${text} = JSpringBotGlobal.Get XML XPath Single Text Content:&lt;/b&gt;</msg>
+<msg level="INFO" timestamp="20141119 18:24:10.412">${text} = boy</msg>
+<status endtime="20141119 18:24:10.410" starttime="20141119 18:24:10.404" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${text}</arg>
+</arguments>
+<msg level="INFO" timestamp="20141119 18:24:10.418">boy</msg>
+<status endtime="20141119 18:24:10.419" starttime="20141119 18:24:10.415" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20141119 18:24:10.422" starttime="20141119 18:24:10.078" status="PASS"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:10.424" starttime="20141119 18:24:10.005" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:10.429" starttime="20141119 18:24:09.976" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20141119 18:24:10.440" starttime="20141119 18:23:53.847" status="FAIL"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="19" fail="1">Critical Tests</stat>
+<stat pass="19" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" doc="" links="" combined="" info="">builtin</stat>
+</tag>
+<suite>
+<stat pass="19" fail="1" name="jspringbot-basic-samples" id="s1">jspringbot-basic-samples</stat>
+<stat pass="2" fail="1" name="Builtin" id="s1-s1">jspringbot-basic-samples.Builtin</stat>
+<stat pass="0" fail="1" name="Sleep" id="s1-s1-s1">jspringbot-basic-samples.Builtin.Sleep</stat>
+<stat pass="2" fail="0" name="变量替换传递" id="s1-s1-s2">jspringbot-basic-samples.Builtin.变量替换传递</stat>
+<stat pass="1" fail="0" name="Collections" id="s1-s2">jspringbot-basic-samples.Collections</stat>
+<stat pass="1" fail="0" name="List" id="s1-s2-s1">jspringbot-basic-samples.Collections.List</stat>
+<stat pass="4" fail="0" name="Condition" id="s1-s3">jspringbot-basic-samples.Condition</stat>
+<stat pass="4" fail="0" name="标准条件" id="s1-s3-s1">jspringbot-basic-samples.Condition.标准条件</stat>
+<stat pass="1" fail="0" name="Environment" id="s1-s4">jspringbot-basic-samples.Environment</stat>
+<stat pass="1" fail="0" name="Global-Env" id="s1-s4-s1">jspringbot-basic-samples.Environment.Global-Env</stat>
+<stat pass="2" fail="0" name="Expression" id="s1-s5">jspringbot-basic-samples.Expression</stat>
+<stat pass="1" fail="0" name="Equal" id="s1-s5-s1">jspringbot-basic-samples.Expression.Equal</stat>
+<stat pass="1" fail="0" name="Not" id="s1-s5-s2">jspringbot-basic-samples.Expression.Not</stat>
+<stat pass="3" fail="0" name="Extended" id="s1-s6">jspringbot-basic-samples.Extended</stat>
+<stat pass="3" fail="0" name="Custom" id="s1-s6-s1">jspringbot-basic-samples.Extended.Custom</stat>
+<stat pass="1" fail="0" name="Os" id="s1-s7">jspringbot-basic-samples.Os</stat>
+<stat pass="1" fail="0" name="File" id="s1-s7-s1">jspringbot-basic-samples.Os.File</stat>
+<stat pass="4" fail="0" name="Variables" id="s1-s8">jspringbot-basic-samples.Variables</stat>
+<stat pass="4" fail="0" name="Datatype" id="s1-s8-s1">jspringbot-basic-samples.Variables.Datatype</stat>
+<stat pass="1" fail="0" name="Xml" id="s1-s9">jspringbot-basic-samples.Xml</stat>
+<stat pass="1" fail="0" name="Xml" id="s1-s9-s1">jspringbot-basic-samples.Xml.Xml</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

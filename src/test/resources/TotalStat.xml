@@ -1,0 +1,4 @@
+<total>
+  <stat pass="16" fail="1">Critical Tests</stat>
+  <stat pass="19" fail="2">All Tests</stat>
+</total>
